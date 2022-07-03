@@ -18,6 +18,10 @@ namespace vidya_backlog_app
             // Removes the blue highlight in the first row
             dgv.DefaultCellStyle.SelectionBackColor = Color.White;
             dgv.DefaultCellStyle.SelectionForeColor = Color.Black;
+            // Adds word wrap for the notes column,
+            // and makes the rows change in size dynamically when resizing window
+            dgv.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgv.Columns[6].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 
         }
 

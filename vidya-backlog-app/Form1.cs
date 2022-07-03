@@ -42,6 +42,7 @@ namespace vidya_backlog_app
         private void ButtonStats(object sender, EventArgs e)
         {
             panelMain.Controls.Clear();
+
             Form myform = new();
             myform.BackColor = Color.Red;
             myform.Dock = DockStyle.Fill;
@@ -50,12 +51,12 @@ namespace vidya_backlog_app
             myform.AutoScroll = true;
             panelMain.Controls.Add(myform);
             myform.Show();
-            System.Diagnostics.Debug.WriteLine("Red");
         }
 
         private void ButtonOptions(object sender, EventArgs e)
         {
             panelMain.Controls.Clear();
+
             Form myform = new();
             myform.BackColor = Color.Green;
             myform.Dock = DockStyle.Fill;

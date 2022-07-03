@@ -34,6 +34,10 @@
             this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colGenre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPlatform = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colRating = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -44,7 +48,11 @@
             this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colID,
             this.colTitle,
-            this.colGenre});
+            this.colGenre,
+            this.colPlatform,
+            this.colStatus,
+            this.colRating,
+            this.colNotes});
             this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv.Location = new System.Drawing.Point(0, 0);
             this.dgv.Name = "dgv";
@@ -75,22 +83,59 @@
             // 
             this.colID.DataPropertyName = "ID";
             this.colID.HeaderText = "#";
+            this.colID.MinimumWidth = 50;
             this.colID.Name = "colID";
             this.colID.ReadOnly = true;
+            this.colID.Width = 50;
             // 
             // colTitle
             // 
             this.colTitle.DataPropertyName = "Title";
             this.colTitle.HeaderText = "Title";
+            this.colTitle.MinimumWidth = 120;
             this.colTitle.Name = "colTitle";
             this.colTitle.ReadOnly = true;
+            this.colTitle.Width = 150;
             // 
             // colGenre
             // 
             this.colGenre.DataPropertyName = "Genre";
             this.colGenre.HeaderText = "Genre";
+            this.colGenre.MinimumWidth = 150;
             this.colGenre.Name = "colGenre";
             this.colGenre.ReadOnly = true;
+            this.colGenre.Width = 150;
+            // 
+            // colPlatform
+            // 
+            this.colPlatform.DataPropertyName = "Platform";
+            this.colPlatform.HeaderText = "Platform";
+            this.colPlatform.Name = "colPlatform";
+            this.colPlatform.ReadOnly = true;
+            // 
+            // colStatus
+            // 
+            this.colStatus.DataPropertyName = "GameStatus";
+            this.colStatus.HeaderText = "Status";
+            this.colStatus.Name = "colStatus";
+            this.colStatus.ReadOnly = true;
+            // 
+            // colRating
+            // 
+            this.colRating.DataPropertyName = "Rating";
+            this.colRating.HeaderText = "Rating";
+            this.colRating.MinimumWidth = 50;
+            this.colRating.Name = "colRating";
+            this.colRating.ReadOnly = true;
+            this.colRating.Width = 50;
+            // 
+            // colNotes
+            // 
+            this.colNotes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colNotes.DataPropertyName = "Notes";
+            this.colNotes.HeaderText = "Notes";
+            this.colNotes.Name = "colNotes";
+            this.colNotes.ReadOnly = true;
             // 
             // MyList
             // 
@@ -116,5 +161,9 @@
         private DataGridViewTextBoxColumn colID;
         private DataGridViewTextBoxColumn colTitle;
         private DataGridViewTextBoxColumn colGenre;
+        private DataGridViewTextBoxColumn colPlatform;
+        private DataGridViewTextBoxColumn colStatus;
+        private DataGridViewTextBoxColumn colRating;
+        private DataGridViewTextBoxColumn colNotes;
     }
 }

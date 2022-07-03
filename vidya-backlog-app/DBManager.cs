@@ -33,7 +33,7 @@ namespace vidya_backlog_app
                 // Now read data..
                 try
                 {
-                    MySqlDataAdapter adapter = new("SELECT Title FROM my_backlog;", con);
+                    MySqlDataAdapter adapter = new("SELECT * FROM my_backlog;", con);
                     DataTable dtbl = new();
                     adapter.Fill(dtbl);
                     list.dgv.DataSource = dtbl;
