@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32602.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vidya-backlog-app", "vidya-backlog-app\vidya-backlog-app.csproj", "{F132D077-5DCC-444F-A67D-1DDEB567A982}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F132D077-5DCC-444F-A67D-1DDEB567A982}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F132D077-5DCC-444F-A67D-1DDEB567A982}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F132D077-5DCC-444F-A67D-1DDEB567A982}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F132D077-5DCC-444F-A67D-1DDEB567A982}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1C63A8FF-22A2-41FE-A05F-BFA3DF2C75B3}
+	EndGlobalSection
+EndGlobal
