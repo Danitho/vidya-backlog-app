@@ -1,7 +1,7 @@
 # vidya-backlog-app
 Personal project of mine. Keep track of your video games. 
 
-Using Windows Forms 😎 Currently a work in progress, lots to do..
+Using Windows Forms for UI, and MySQL for managing the data 😎🐬 Currently a work in progress, lots to do..
 
 Screenshot of app (07.03.22):
 
