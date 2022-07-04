@@ -1,8 +1,8 @@
 namespace vidya_backlog_app
 {
-    public partial class Main : Form
+    public partial class mainWindow : Form
     {
-        public Main()
+        public mainWindow()
         {
             InitializeComponent();
         }

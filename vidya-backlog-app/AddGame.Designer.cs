@@ -31,17 +31,17 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblRatingNum = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txbNotes = new System.Windows.Forms.TextBox();
             this.tbRating = new System.Windows.Forms.TrackBar();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.cbStatus = new System.Windows.Forms.ComboBox();
+            this.txbPlatform = new System.Windows.Forms.TextBox();
             this.lblNotes = new System.Windows.Forms.Label();
             this.lblRating = new System.Windows.Forms.Label();
             this.lblStatus = new System.Windows.Forms.Label();
             this.lblPlatform = new System.Windows.Forms.Label();
             this.lblGenre = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbGenre = new System.Windows.Forms.TextBox();
+            this.txbTitle = new System.Windows.Forms.TextBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbRating)).BeginInit();
@@ -51,17 +51,17 @@
             // 
             this.panel1.Controls.Add(this.lblRatingNum);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.txbNotes);
             this.panel1.Controls.Add(this.tbRating);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.cbStatus);
+            this.panel1.Controls.Add(this.txbPlatform);
             this.panel1.Controls.Add(this.lblNotes);
             this.panel1.Controls.Add(this.lblRating);
             this.panel1.Controls.Add(this.lblStatus);
             this.panel1.Controls.Add(this.lblPlatform);
             this.panel1.Controls.Add(this.lblGenre);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txbGenre);
+            this.panel1.Controls.Add(this.txbTitle);
             this.panel1.Controls.Add(this.lblTitle);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -87,14 +87,15 @@
             this.button1.TabIndex = 12;
             this.button1.Text = "Add game";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox4
+            // txbNotes
             // 
-            this.textBox4.Location = new System.Drawing.Point(32, 268);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(259, 115);
-            this.textBox4.TabIndex = 11;
+            this.txbNotes.Location = new System.Drawing.Point(32, 268);
+            this.txbNotes.Multiline = true;
+            this.txbNotes.Name = "txbNotes";
+            this.txbNotes.Size = new System.Drawing.Size(259, 115);
+            this.txbNotes.TabIndex = 11;
             // 
             // tbRating
             // 
@@ -104,29 +105,29 @@
             this.tbRating.TabIndex = 10;
             this.tbRating.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
-            // comboBox1
+            // cbStatus
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbStatus.FormattingEnabled = true;
+            this.cbStatus.Items.AddRange(new object[] {
             "Planned",
             "Ready",
             "Playing",
             "Completed",
             "On Hold",
             "Dropped"});
-            this.comboBox1.Location = new System.Drawing.Point(79, 137);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 9;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cbStatus.Location = new System.Drawing.Point(79, 137);
+            this.cbStatus.Name = "cbStatus";
+            this.cbStatus.Size = new System.Drawing.Size(121, 23);
+            this.cbStatus.TabIndex = 9;
+            this.cbStatus.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // textBox3
+            // txbPlatform
             // 
-            this.textBox3.Location = new System.Drawing.Point(79, 95);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(148, 23);
-            this.textBox3.TabIndex = 8;
+            this.txbPlatform.Location = new System.Drawing.Point(79, 95);
+            this.txbPlatform.Name = "txbPlatform";
+            this.txbPlatform.Size = new System.Drawing.Size(148, 23);
+            this.txbPlatform.TabIndex = 8;
             // 
             // lblNotes
             // 
@@ -173,20 +174,20 @@
             this.lblGenre.TabIndex = 3;
             this.lblGenre.Text = "Genre";
             // 
-            // textBox2
+            // txbGenre
             // 
-            this.textBox2.Location = new System.Drawing.Point(79, 56);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(148, 23);
-            this.textBox2.TabIndex = 2;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txbGenre.Location = new System.Drawing.Point(79, 56);
+            this.txbGenre.Name = "txbGenre";
+            this.txbGenre.Size = new System.Drawing.Size(148, 23);
+            this.txbGenre.TabIndex = 2;
+            this.txbGenre.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox1
+            // txbTitle
             // 
-            this.textBox1.Location = new System.Drawing.Point(79, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(186, 23);
-            this.textBox1.TabIndex = 1;
+            this.txbTitle.Location = new System.Drawing.Point(79, 22);
+            this.txbTitle.Name = "txbTitle";
+            this.txbTitle.Size = new System.Drawing.Size(186, 23);
+            this.txbTitle.TabIndex = 1;
             // 
             // lblTitle
             // 
@@ -221,14 +222,14 @@
         private Label lblStatus;
         private Label lblPlatform;
         private Label lblGenre;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txbGenre;
+        private TextBox txbTitle;
         private Label lblTitle;
         private Button button1;
-        private TextBox textBox4;
+        private TextBox txbNotes;
         private TrackBar tbRating;
-        private ComboBox comboBox1;
-        private TextBox textBox3;
+        private ComboBox cbStatus;
+        private TextBox txbPlatform;
         private Label lblRatingNum;
     }
 }

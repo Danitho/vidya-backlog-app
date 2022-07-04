@@ -37,6 +37,7 @@ namespace vidya_backlog_app
                     DataTable dtbl = new();
                     adapter.Fill(dtbl);
                     list.dgv.DataSource = dtbl;
+                    con.Close();
 
                 } catch(Exception ex)
                 {
@@ -44,6 +45,49 @@ namespace vidya_backlog_app
                 }
 
             } catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        public static void Write(string title, string genre, string platform, string status, int rating, string notes)
+        {
+            string server = "localhost";
+            string database = "vidya_backlog";
+            string uid = "user";
+            string pass = "vidya";
+
+            string connString =
+                "Server=" + server + ";" +
+                "Database=" + database + ";" +
+                "UID=" + uid + ";" +
+                "Password=" + pass + ";"
+            ;
+
+            try
+            {
+                MySqlConnection con = new(connString);
+                con.Open();
+                // Now write data..
+                try
+                {
+                    // ugh, what a mess
+                    string query = "INSERT INTO my_backlog(Title, Genre, Platform, GameStatus, Rating, Notes) " +
+                        "VALUES('" + title + "','" + genre + "','" + platform + "','" + status + "'," + rating + ",'" + notes + "')";
+
+
+                    MySqlCommand cmd = new MySqlCommand(query, con);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+
+            }
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
