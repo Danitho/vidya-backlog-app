@@ -43,5 +43,11 @@ namespace vidya_backlog_app
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddGame window = new();
+            window.Show();
+        }
     }
 }

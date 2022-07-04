@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.dgv = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colGenre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,6 +36,8 @@
             this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colRating = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -60,24 +60,6 @@
             this.dgv.Size = new System.Drawing.Size(993, 450);
             this.dgv.TabIndex = 0;
             this.dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 375);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(993, 75);
-            this.panel1.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(47, 28);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Add game";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // colID
             // 
@@ -136,6 +118,27 @@
             this.colNotes.HeaderText = "Notes";
             this.colNotes.Name = "colNotes";
             this.colNotes.ReadOnly = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 400);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(993, 50);
+            this.panel1.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 50);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Add game";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MyList
             // 
