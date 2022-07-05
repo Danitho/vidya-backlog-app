@@ -19,6 +19,7 @@ Screenshot of app (07.03.22):
 * -[ ] Add images to each game (Maybe an API?)
 * -[ ] Add button in My List that allows the user to toggle between list view and image view
 * -[ ] Add a color to status column depending on the status?
+* -[ ] Add some QoL changes like simple animations and sound effects? 
 
 To be continued...
 
