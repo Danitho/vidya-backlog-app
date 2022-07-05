@@ -29,15 +29,14 @@
         private void InitializeComponent()
         {
             this.dgv = new System.Windows.Forms.DataGridView();
-            this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.colTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colGenre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPlatform = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colRating = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -46,7 +45,6 @@
             // 
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colID,
             this.colTitle,
             this.colGenre,
             this.colPlatform,
@@ -57,27 +55,40 @@
             this.dgv.Location = new System.Drawing.Point(0, 0);
             this.dgv.Name = "dgv";
             this.dgv.RowTemplate.Height = 25;
-            this.dgv.Size = new System.Drawing.Size(993, 450);
+            this.dgv.Size = new System.Drawing.Size(1169, 552);
             this.dgv.TabIndex = 0;
             this.dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
             // 
-            // colID
+            // panel1
             // 
-            this.colID.DataPropertyName = "ID";
-            this.colID.HeaderText = "#";
-            this.colID.MinimumWidth = 50;
-            this.colID.Name = "colID";
-            this.colID.ReadOnly = true;
-            this.colID.Width = 50;
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 502);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1169, 50);
+            this.panel1.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 50);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Add game";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // colTitle
             // 
+            this.colTitle.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.colTitle.DataPropertyName = "Title";
             this.colTitle.HeaderText = "Title";
-            this.colTitle.MinimumWidth = 120;
+            this.colTitle.MinimumWidth = 180;
             this.colTitle.Name = "colTitle";
             this.colTitle.ReadOnly = true;
-            this.colTitle.Width = 150;
+            this.colTitle.Width = 180;
             // 
             // colGenre
             // 
@@ -119,32 +130,11 @@
             this.colNotes.Name = "colNotes";
             this.colNotes.ReadOnly = true;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 400);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(993, 50);
-            this.panel1.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 50);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Add game";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // MyList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(993, 450);
+            this.ClientSize = new System.Drawing.Size(1169, 552);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgv);
             this.Name = "MyList";
@@ -161,7 +151,6 @@
         public DataGridView dgv;
         private Panel panel1;
         private Button button1;
-        private DataGridViewTextBoxColumn colID;
         private DataGridViewTextBoxColumn colTitle;
         private DataGridViewTextBoxColumn colGenre;
         private DataGridViewTextBoxColumn colPlatform;

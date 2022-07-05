@@ -36,7 +36,7 @@ namespace vidya_backlog_app
             list.Show();
 
             // View data in database
-            DBManager.ConnectAndRead(list);
+            DBManager.Read(list);
         }
 
         private void ButtonStats(object sender, EventArgs e)
